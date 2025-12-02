@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agents4Brokers</title>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Customstyles CSS -->
+  <link href="customstyles.css" rel="stylesheet">
+  <style>
+    body {
+      background: #f7f9fb;
+    }
+
+    .calendar-box,
+    .right-box {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.07);
+    }
+
+    .view-switch .btn {
+      border-radius: 40px;
+    }
+
+    .view-switch .active {
+      background: #00a36c;
+      color: #fff;
+    }
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 8px;
+    }
+
+    .day-name {
+      font-weight: bold;
+      text-align: center;
+      padding-bottom: 10px;
+    }
+
+    .day-box {
+      height: 90px;
+      background: #fff;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      padding: 6px;
+      font-size: 14px;
+      position: relative;
+    }
+
+    .event-blue,
+    .event-green {
+      position: absolute;
+      left: 5px;
+      bottom: 5px;
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-size: 10px;
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    .event-blue {
+      background: #007bff;
+    }
+
+    .event-green {
+      background: #00b050;
+    }
+
+    .task-item {
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .task-item:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Sidebar + Main Layout -->
+  <div class="d-flex" style="background-color: #fdfdfd;">
+
+    <button class="mobile-menu">☰</button>
+
+    <aside id="sidebarone" class="sidebarone p-3">
+      <img src="images/dashboard/form-logo.png" alt="Form Logo" class="mb-5">
+
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a class="nav-link " href="#"><i class="bi bi-house-fill"></i>
+            Dashboard</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="#"><i class="bi bi-puzzle-fill"></i> Create Course
+          </a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="#"><i class="bi bi-diagram-2"></i> Publish Course
+          </a></li>
+        <li class="nav-item mb-2"><a class="nav-link " href="#"><i class="bi bi-funnel-fill"></i> Track
+            Enrollment </a></li>
+        <li class="nav-item mb-4"><a class="nav-link active" href="#"><i class="bi bi-person-vcard"></i> View
+            Feedback
+          </a></li>
+      </ul>
+
+      <div style="display: flex; justify-content: start; align-items: end; height: 100%; font-weight: bold;">
+        <a href="#" class="nav-link"><i class="bi bi-headset" style="font-size: 22px;"></i> Contact Support</a>
+      </div>
+    </aside>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar p-3">
+      <img src="images/dashboard/form-logo.png" alt="Form Logo" class="mb-5">
+
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a class="nav-link " href="#"><i class="bi bi-house-fill"></i>
+            Dashboard</a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="#"><i class="bi bi-puzzle-fill"></i> Create Course
+          </a></li>
+        <li class="nav-item mb-2"><a class="nav-link" href="#"><i class="bi bi-diagram-2"></i> Publish Course
+          </a></li>
+        <li class="nav-item mb-2"><a class="nav-link " href="#"><i class="bi bi-funnel-fill"></i> Track
+            Enrollment </a></li>
+        <li class="nav-item mb-4"><a class="nav-link active" href="#"><i class="bi bi-person-vcard"></i> View
+            Feedback
+          </a></li>
+      </ul>
+
+      <div style="display: flex; justify-content: start; align-items: end; height: 100%; font-weight: bold !important;">
+        <a href="#" class="nav-link"><i class="bi bi-headset" style="font-size: 22px;"></i> Contact Support</a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="container-fluid p-4 calendar">
+
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h3><strong>Calendar</strong> / <span style="color: #0484CD; font-weight: 600;">Tasks</span></h3>
+          <p class="text-muted">Schedule interviews, set reminders.</p>
+        </div>
+        <button class="btn px-4">Schedule Interview</button>
+      </div>
+
+      <div class="row">
+
+        <!-- LEFT CALENDAR -->
+        <div class="col-lg-8 mb-4">
+          <div class="calendar-box p-4">
+            <div class="calendar-head">
+
+              <div class="d-flex justify-content-start mb-3">
+                <h5 id="monthTitle" class="fw-bold"></h5>
+
+                <div class="d-flex gap-1">
+                  <i class="bi bi-chevron-left fs-5" id="prevMonth" style="cursor:pointer"></i>
+                  <i class="bi bi-chevron-right fs-5" id="nextMonth" style="cursor:pointer"></i>
+                </div>
+              </div>
+
+              <div class="view-switch mb-3">
+                <button class="btn btn-light">Month</button>
+                <button class="btn btn-light">Week</button>
+                <button class="btn btn-light">Day</button>
+              </div>
+            </div>
+            <!-- DYNAMIC CALENDAR GRID -->
+            <div id="calendarGrid" class="calendar-grid"></div>
+
+          </div>
+        </div>
+
+        <!-- RIGHT SIDEBAR -->
+        <div class="col-lg-4">
+
+          <div class="right-box p-4 mb-4 text-center">
+            <h6 class="fw-bold mb-3">Today's <span class="text-primary">Tasks</span></h6>
+
+            <div id="taskList"></div>
+          </div>
+
+          <div class="right-box p-4">
+            <h6 class="fw-bold mb-3">Reminders</h6>
+            <div id="reminderList"></div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const toggle = document.querySelector(".mobile-menu");
+      const sidebar = document.querySelector("#sidebarone");
+
+      toggle.addEventListener("click", function () {
+        sidebar.classList.toggle("active");
+      });
+
+    });
+
+  </script>
+  <script>
+
+    const events = [
+      { date: "2025-10-12", label: "Interview", type: "green" },
+      { date: "2025-10-17", label: "Team Meeting", type: "blue" },
+      { date: "2025-10-17", label: "AI Sync", type: "green" },
+    ];
+
+    const tasks = [
+      { title: "Finalize design for new feature", person: "Johnson", time: "10:00 AM" },
+      { title: "Prepare slides for team meeting", person: "S.Lee", time: "2:00 PM" },
+      { title: "Review candidate resume", person: "—", time: "4:00 PM" },
+      { title: "Draft weekly report", person: "Completed", time: "done" }
+    ];
+
+    const reminders = [
+      { title: "Agent Interview With Me", time: "In 15 Minutes" }
+    ];
+
+
+    /* ------------------------------------
+       CALENDAR GENERATOR
+    -------------------------------------*/
+    let currentMonth = 9;  // October (0 index)
+    let currentYear = 2025;
+
+    const monthNames = [
+      "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+
+    function loadCalendar() {
+      const monthTitle = document.getElementById("monthTitle");
+      const calendarGrid = document.getElementById("calendarGrid");
+
+      calendarGrid.innerHTML = "";
+      monthTitle.textContent = `${monthNames[currentMonth]} ${currentYear}`;
+
+      // Day Titles
+      const dayTitles = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      dayTitles.forEach(d => {
+        calendarGrid.innerHTML += `<div class='day-name'>${d}</div>`;
+      });
+
+      let firstDay = new Date(currentYear, currentMonth, 1).getDay();
+      let daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+      // Empty boxes before month starts
+      for (let i = 0; i < firstDay; i++) {
+        calendarGrid.innerHTML += `<div class='day-box'></div>`;
+      }
+
+      // Actual days
+      for (let d = 1; d <= daysInMonth; d++) {
+        let fullDate = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+
+        let todaysEvents = events.filter(e => e.date === fullDate);
+        let eventHTML = "";
+
+        todaysEvents.forEach(ev => {
+          eventHTML += `<span class="event-${ev.type}">${ev.label}</span>`;
+        });
+
+        calendarGrid.innerHTML += `
+            <div class='day-box position-relative'>
+                ${d}
+                ${eventHTML}
+            </div>
+        `;
+      }
+    }
+
+
+    /* ------------------------------------
+       LOAD TASKS & REMINDERS
+    -------------------------------------*/
+    function loadTasks() {
+      let taskList = document.getElementById("taskList");
+      taskList.innerHTML = "";
+
+      tasks.forEach(t => {
+        taskList.innerHTML += `
+            <div class="task-item">
+                <p class="text-muted">${t.title}</p>
+                <p class="small text-muted d-flex justify-content-between ali"><div><i class="bi bi-person"></i> ${t.person} </div><div><i class="bi bi-person"></i> ${t.time}<div></p>
+            </div>
+        `;
+      });
+    }
+
+    function loadReminders() {
+      let reminderList = document.getElementById("reminderList");
+      reminderList.innerHTML = "";
+
+      reminders.forEach(r => {
+        reminderList.innerHTML += `
+            <div class="task-item">
+                <p class="fw-bold mb-1">${r.title}</p>
+                <p class="small text-success"><i class="bi bi-circle-fill"></i> ${r.time}</p>
+            </div>
+        `;
+      });
+    }
+
+
+    /* ------------------------------------
+       MONTH SWITCHING
+    -------------------------------------*/
+    document.getElementById("prevMonth").addEventListener("click", () => {
+      currentMonth--;
+      if (currentMonth < 0) { currentMonth = 11; currentYear--; }
+      loadCalendar();
+    });
+
+    document.getElementById("nextMonth").addEventListener("click", () => {
+      currentMonth++;
+      if (currentMonth > 11) { currentMonth = 0; currentYear++; }
+      loadCalendar();
+    });
+
+    loadCalendar();
+    loadTasks();
+    loadReminders();
+  </script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

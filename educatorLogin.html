@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agents4Brokers</title>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Customstyles CSS -->
+    <link href="customstyles.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container login">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 m-auto">
+                <img src="images/dashboard/educator-img.png" alt="Dashboard Preview" class="loginSideImg">
+            </div>
+            <div class="col-lg-6 col-sm-12 text-center dashboard-form">
+                <img src="images/dashboard/form-logo.png" alt="Form Logo" class="logo-form">
+                <h2>Welcome Back 👋</h2>
+                <p>Please login to your account</p>
+
+                <div class="container mt-4 text-start" >
+
+                    <!-- Email -->
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                    </div>
+
+                    <!-- Password + Eye Icon -->
+                    <div class="mb-3 position-relative">
+                        <label class="form-label">Password</label>
+                        <input type="password" id="password" class="form-control" placeholder="Enter your password">
+
+                        <!-- Eye Icon -->
+                        <i class="bi bi-eye-fill" id="togglePassword"></i>
+                    </div>
+
+                    <!-- Remember + Forget -->
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div>
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember me</label>
+                        </div>
+
+                        <a href="#" class="forgot-link text-decoration-none">Forgot Password?</a>
+                    </div>
+
+                    <button class="btn btn-primary w-100 rounded-5" style="background-color: #76C54B;padding: 10px;">Login</button>
+                </div>
+                <div class="login-section">
+                    <div class="login-separator">
+                        <span>or Login with</span>
+                    </div>
+                    <div class="social-buttons">
+                        <button class="google-login"> Google
+                            <img src="images/dashboard/google.png" alt="google-img">
+                           
+                        </button>
+                        <button class="facebook-login">Facebook
+                            <img src="images/dashboard/facebook.png" alt="facebook-img">
+                            
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

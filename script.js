@@ -1,17 +1,38 @@
-var swiper = new Swiper(".testimonialSwiper", {
-  loop: true,
-  centeredSlides: true,
-  grabCursor: true,
-  speed: 800,
-  spaceBetween: 30,
-  loopAdditionalSlides: 8,
+// var swiper = new Swiper(".testimonialSwiper", {
+//   loop: false,
+//   centeredSlides: true,
+//   grabCursor: true,
+//   speed: 800,
+//   spaceBetween: 30,
+//   loopAdditionalSlides: 8,
 
-  breakpoints: {
-    425: { slidesPerView: 1 },
-    768: { slidesPerView: 1 },
-    992: { slidesPerView: 3 }
-  }
-});
+//   breakpoints: {
+//     425: { slidesPerView: 3 },
+//     768: { slidesPerView: 3 },
+//     992: { slidesPerView: 3 }
+//   }
+// });
+
+function company_carouselInit() {
+  $('.owl-carousel.slider_active').owlCarousel({
+    loop: true,
+    margin: 30,
+    stagePadding: 2,
+    center: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 1,
+      },
+      992: {
+        items: 3
+      }
+    }
+  });
+}
+company_carouselInit();
 
 
 document.addEventListener("DOMContentLoaded", function () {

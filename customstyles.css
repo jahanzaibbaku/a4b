@@ -4367,8 +4367,9 @@ input.form-control {
     }
 
     .success-section .arrow-image {
-        right: 0;
+        right: 40%;
         bottom: 0;
-        transform: translateX(0);
+        transform: scale(0.7);
     }
+
 }

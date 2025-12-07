@@ -260,7 +260,7 @@
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                           <i class="bi bi-circle-fill"></i> What&apos;s include in the free trial?
+                            <i class="bi bi-circle-fill"></i> What&apos;s include in the free trial?
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -378,6 +378,20 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('.pricing-tab').forEach(btn => {
+            btn.addEventListener('click', function () {
+
+                document.querySelectorAll('.pricing-tab').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                document.querySelectorAll('.pricing-content').forEach(sec => sec.classList.add('d-none'));
+
+                const target = this.getAttribute('data-target');
+                document.querySelector(target).classList.remove('d-none');
+            });
+        });
+    </script>
 </body>
 
 </html>

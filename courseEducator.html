@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agents4Brokers</title>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Customstyles CSS -->
+    <link href="customstyles.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <!-- Sidebar + Main Layout -->
+    <div class="d-flex" style="background-color: #FDFDFD;">
+
+        <button class="mobile-menu">☰</button>
+
+        <aside id="sidebarone" class="sidebarone p-3">
+            <img src="images/dashboard/form-logo.png" alt="Form Logo" class="mb-5">
+
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a class="nav-link " href="#"><img src="images/dashboard_icon.svg"
+                            alt="dashboard"></i>
+                        Dashboard</a></li>
+                <li class="nav-item mb-2"><a class="nav-link" href="#"><img src="images/userManagement_icon.svg"
+                            alt="user"> User Management </a></li>
+                <li class="nav-item mb-2"><a class="nav-link" href="#"><img src="images/subscription_icon.svg"
+                            alt="Subscription"> Subscription </a></li>
+                <li class="nav-item mb-2"><a class="nav-link" href="#"><img src="images/analytics_icon.svg"
+                            alt="Analytics"> Analytics </a></li>
+                <li class="nav-item mb-4"><a class="nav-link" href="#"><img src="images/setting_icon.svg" alt="Setting">
+                        System Setting </a></li>
+                <li class="nav-item mb-4"><a class="nav-link" href="#"><img src="images/pipeline_icon.svg"
+                            alt="pipeline_icon"> Recruiting Pipeline </a></li>
+                <li class="nav-item mb-4"><a class="nav-link active" href="#"><img src="images/educator_icon.svg"
+                            alt="educator_icon"> Course & Educator Management </a></li>
+            </ul>
+
+            <div style="display: flex; justify-content: start; align-items: end; height: 100%; font-weight: bold;">
+                <a href="#" class="nav-link"><img src="images/support_icon.svg" alt="support_icon"> Contact Support</a>
+            </div>
+        </aside>
+
+        <!-- Sidebar -->
+        <aside id="sidebar" class="sidebar p-3">
+            <img src="images/dashboard/form-logo.png" alt="Form Logo" class="mb-5">
+
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a class="nav-link" href="#"><img src="images/dashboard_icon.svg"
+                            alt="dashboard"></i>
+                        Dashboard</a></li>
+                <li class="nav-item mb-2"><a class="nav-link" href="#"><img src="images/userManagement_icon.svg"
+                            alt="user"> User Management </a></li>
+                <li class="nav-item mb-2"><a class="nav-link" href="#"><img src="images/subscription_icon.svg"
+                            alt="Subscription"> Subscription </a></li>
+                <li class="nav-item mb-2"><a class="nav-link" href="#"><img src="images/analytics_icon.svg"
+                            alt="Analytics"> Analytics </a></li>
+                <li class="nav-item mb-4"><a class="nav-link" href="#"><img src="images/setting_icon.svg" alt="Setting">
+                        System Setting </a></li>
+                <li class="nav-item mb-4"><a class="nav-link" href="#"><img src="images/pipeline_icon.svg"
+                            alt="pipeline_icon"> Recruiting Pipeline </a></li>
+                <li class="nav-item mb-4"><a class="nav-link active" href="#"><img src="images/educator_icon.svg"
+                            alt="educator_icon"> Course & Educator Management </a></li>
+            </ul>
+
+            <div style="display: flex; justify-content: start; align-items: end; height: 100%; font-weight: bold;">
+                <a href="#" class="nav-link"><img src="images/support_icon.svg" alt="support_icon"> Contact Support</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-grow-1 p-4" style="overflow: hidden;">
+
+            <!-- Welcome section -->
+            <div class="welcome-box p-3 mb-4">
+                <h5 class="mb-0">Welcome back Tom 👋</h5>
+                <div class="user-info">
+                    <i class="bi bi-bell"></i>
+                    <div>
+                        <div class="user-profile">
+                            <img src="images/dashboard/user-info.png" alt="user image">
+                            <h6>Tom <i class="bi bi-chevron-down"></i></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course & Educator Management -->
+            <div class="asm">
+                <div class="asm-d">
+                    <h2 class="profile-completion">Course & Educator <span>Management</span></h2>
+                </div>
+                <button class="asm-btn">Create New Plan</button>
+            </div>
+            <div class="asm">
+                <div class="asm-d cc">
+                    <h3>Educator Performance Overview</h3>
+                </div>
+                <button class="asm-btn" style="background-color: #0484CD;">Invite Educator</button>
+            </div>
+
+            <div class="agent-reports arm">
+                <div class="adminReport shadow">
+                    <h2>12,450</h2>
+                    <h4>Total Enrollments</h4>
+                    <h5>+ 12.6% from last month</h5>
+                </div>
+                <div class="adminReport shadow">
+                    <h2>4.8 / 5.0</h2>
+                    <h4>Average Rating</h4>
+                    <h5>+ 8.2% from last month</h5>
+                </div>
+                <div class="adminReport shadow">
+                    <h2>$25,830</h2>
+                    <h4>Total Revenue</h4>
+                    <h5>+ 2.% from last month</h5>
+                </div>
+            </div>
+
+
+            <!-- User Management -->
+            <h2 class="profile-completion cc">Course Catalog</h2>
+
+
+            <div class="text-left cedu">
+                <button class="pricing-tab active" data-target="#all">All</button>
+                <button class="pricing-tab" data-target="#pending">Pending Approval</button>
+                <button class="pricing-tab" data-target="#live">Live</button>
+                <button class="pricing-tab" data-target="#rejected">Rejected</button>
+                <button class="pricing-tab" data-target="#flagged">Flagged</button>
+            </div>
+
+            <div id="all" class="pricing-content container mt-5">
+                <div class="table-wrapper">
+
+                    <!-- Header Row -->
+                    <div class="row header-row-cedu text-center mb-3">
+                        <div class="col">Course & Educator</div>
+                        <div class="col">Category</div>
+                        <div class="col">Date Submitted</div>
+                        <div class="col">Status</div>
+                        <div class="col">Action</div>
+                    </div>
+
+                    <div class="scroll-area ausa">
+
+                        <div class="row align-items-center py-3 border-bottom">
+                            <div class="col-3 d-flex align-items-center gap-3">
+                                <input type="checkbox" class="ceduin">
+                                <div>
+                                    <strong>Advanced Real Estate</strong><br>
+                                    <small>Dr, Eleanor Vance</small>
+                                </div>
+                            </div>
+
+                            <div class="col text-center">
+                                <span data-title="agent">Negotiation</span>
+                            </div>
+
+                            <div class="col text-center">
+                                <span data-title="date">06/10/2024</span>
+                            </div>
+
+                            <div class="col text-center cedu-s" data-title="Status">
+                                <button>Live</button>
+                            </div>
+
+                            <div class="col text-center cedu-a" data-title="Action">
+                                <button>
+                                    <img src="images/editt.svg" alt="editt">
+                                </button>
+                                <button>
+                                    <img src="images/vieww.svg" alt="vieww">
+                                </button>
+                                <button>
+                                    <img src="images/flagg.svg" alt="flagg">
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center py-3 border-bottom">
+                            <div class="col-3 d-flex align-items-center gap-3">
+                                <input type="checkbox" class="ceduin">
+                                <div>
+                                    <strong>Advanced Real Estate</strong><br>
+                                    <small>Dr, Eleanor Vance</small>
+                                </div>
+                            </div>
+
+                            <div class="col text-center">
+                                <span data-title="agent">Negotiation</span>
+                            </div>
+
+                            <div class="col text-center">
+                                <span data-title="date">06/10/2024</span>
+                            </div>
+
+                            <div class="col text-center cedu-s" data-title="Status">
+                                <button>Live</button>
+                            </div>
+
+                            <div class="col text-center cedu-a" data-title="Action">
+                                <button>
+                                    <img src="images/editt.svg" alt="editt">
+                                </button>
+                                <button>
+                                    <img src="images/vieww.svg" alt="vieww">
+                                </button>
+                                <button>
+                                    <img src="images/flagg.svg" alt="flagg">
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center py-3 border-bottom">
+                            <div class="col-3 d-flex align-items-center gap-3">
+                                <input type="checkbox" class="ceduin">
+                                <div>
+                                    <strong>Real Estate Law</strong><br>
+                                    <small>Lissa Mek</small>
+                                </div>
+                            </div>
+
+                            <div class="col text-center">
+                                <span data-title="agent">Legal</span>
+                            </div>
+
+                            <div class="col text-center">
+                                <span data-title="date">25/08/2025</span>
+                            </div>
+
+                            <div class="col text-center cedu-so" data-title="Status">
+                                <button>Pending Approval</button>
+                            </div>
+
+                            <div class="col text-center cedu-a" data-title="Action">
+                                <button>
+                                    <img src="images/tickk.svg" alt="editt">
+                                </button>
+                                <button>
+                                    <img src="images/closee.svg" alt="vieww">
+                                </button>
+                                <button>
+                                    <img src="images/vieww.svg" alt="flagg">
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center py-3 border-bottom">
+                            <div class="col-3 d-flex align-items-center gap-3">
+                                <input type="checkbox" class="ceduin">
+                                <div>
+                                    <strong>Real Estate Law</strong><br>
+                                    <small>Lissa Mek</small>
+                                </div>
+                            </div>
+
+                            <div class="col text-center">
+                                <span data-title="agent">Legal</span>
+                            </div>
+
+                            <div class="col text-center">
+                                <span data-title="date">25/08/2025</span>
+                            </div>
+
+                            <div class="col text-center cedu-so" data-title="Status">
+                                <button>Pending Approval</button>
+                            </div>
+
+                            <div class="col text-center cedu-a" data-title="Action">
+                                <button>
+                                    <img src="images/tickk.svg" alt="editt">
+                                </button>
+                                <button>
+                                    <img src="images/closee.svg" alt="vieww">
+                                </button>
+                                <button>
+                                    <img src="images/vieww.svg" alt="flagg">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row align-items-center py-3 border-bottom">
+                            <div class="col-3 d-flex align-items-center gap-3">
+                                <input type="checkbox" class="ceduin">
+                                <div>
+                                    <strong>Real Estate Law</strong><br>
+                                    <small>Lissa Mek</small>
+                                </div>
+                            </div>
+
+                            <div class="col text-center">
+                                <span data-title="agent">Legal</span>
+                            </div>
+
+                            <div class="col text-center">
+                                <span data-title="date">25/08/2025</span>
+                            </div>
+
+                            <div class="col text-center cedu-sr" data-title="Status">
+                                <button>Rejected</button>
+                            </div>
+
+                            <div class="col text-center cedu-a" data-title="Action">
+
+                                <button>
+                                    <img src="images/vieww.svg" alt="flagg">
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Pending Approval Section -->
+            <div id="pending" class="pricing-content container mt-5 d-none">
+                <div class="table-wrapper">
+                    <!-- Header Row -->
+                    <div class="row header-row-cedu text-center mb-3">
+                        <div class="col-3 text-start">Course & Educator</div>
+                        <div class="col">Category</div>
+                        <div class="col">Date Submitted</div>
+                        <div class="col">Status</div>
+                        <div class="col">Action</div>
+                    </div>
+
+                    <div class="scroll-area ausa">
+
+                        <div class="row align-items-center py-3 border-bottom">
+                            <div class="col-3 d-flex align-items-center gap-3">
+                                <input type="checkbox" class="ceduin">
+                                <div>
+                                    <strong>Real Estate Law</strong><br>
+                                    <small>Lissa Mek</small>
+                                </div>
+                            </div>
+
+                            <div class="col text-center">
+                                <span data-title="agent">Legal</span>
+                            </div>
+
+                            <div class="col text-center">
+                                <span data-title="date">25/08/2025</span>
+                            </div>
+
+                            <div class="col text-center cedu-so" data-title="Status">
+                                <button>Pending Approval</button>
+                            </div>
+
+                            <div class="col text-center cedu-a" data-title="Action">
+                                <button>
+                                    <img src="images/tickk.svg" alt="editt">
+                                </button>
+                                <button>
+                                    <img src="images/closee.svg" alt="vieww">
+                                </button>
+                                <button>
+                                    <img src="images/vieww.svg" alt="flagg">
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center py-3 border-bottom">
+                            <div class="col-3 d-flex align-items-center gap-3">
+                                <input type="checkbox" class="ceduin">
+                                <div>
+                                    <strong>Real Estate Law</strong><br>
+                                    <small>Lissa Mek</small>
+                                </div>
+                            </div>
+
+                            <div class="col text-center">
+                                <span data-title="agent">Legal</span>
+                            </div>
+
+                            <div class="col text-center">
+                                <span data-title="date">25/08/2025</span>
+                            </div>
+
+                            <div class="col text-center cedu-so" data-title="Status">
+                                <button>Pending Approval</button>
+                            </div>
+
+                            <div class="col text-center cedu-a" data-title="Action">
+                                <button>
+                                    <img src="images/tickk.svg" alt="editt">
+                                </button>
+                                <button>
+                                    <img src="images/closee.svg" alt="vieww">
+                                </button>
+                                <button>
+                                    <img src="images/vieww.svg" alt="flagg">
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rejected Section -->
+            <div id="live" class="pricing-content container mt-5 d-none">
+                <div class="alert alert-info">Rejected Section</div>
+            </div>
+        </main>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const toggle = document.querySelector(".mobile-menu");
+            const sidebar = document.querySelector("#sidebarone");
+
+            toggle.addEventListener("click", function () {
+                sidebar.classList.toggle("active");
+            });
+
+        });
+
+    </script>
+    <script>
+
+        document.querySelectorAll('.pricing-tab').forEach(btn => {
+            btn.addEventListener('click', function () {
+
+                document.querySelectorAll('.pricing-tab').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                document.querySelectorAll('.pricing-content').forEach(sec => sec.classList.add('d-none'));
+
+                const target = this.getAttribute('data-target');
+                document.querySelector(target).classList.remove('d-none');
+            });
+        });
+
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

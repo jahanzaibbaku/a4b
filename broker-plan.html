@@ -20,6 +20,12 @@
 <!-- Customstyles CSS -->
 <link href="assets/css/customstyles.css" rel="stylesheet">
 
+<style>
+
+
+
+</style>
+
 <body>
 
     <!-- header start -->
@@ -83,7 +89,8 @@
                                 <li><a href="about.html">About Us</a></li>
                                 <li><a href="features.html">Features</a></li>
                                 <li><a href="blogs.html">Blog</a></li>
-                                <a href="contact.html"><button type="button" class="btn btn-dark">Contact Us</button></a>
+                                <a href="contact.html"><button type="button" class="btn btn-dark">Contact
+                                        Us</button></a>
                             </ul>
                         </div>
                     </div>
@@ -98,70 +105,71 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="global_inner">
-                        <h1>Should You Subscribe <br>as a Vendor?</h1>
+                        <h1>Find Your Ideal Broker Plan</h1>
                     </div>
                     <div class="question_inner">
-                        <form>
+                        <form id="planForm" class="form-container">
                             <div class="question">
                                 <div class="inline_wrap">
                                     <span class="q-number">01</span>
-                                    <span class="q-text">How many courses do you plan to list on The Agent Academy?</span>
+                                    <span class="q-text">How many agents are on your team?</span>
                                 </div>
                                 <div class="options">
-                                    <label><input type="radio" name="courses" value="1"> 1 course</label>
-                                    <label><input type="radio" name="courses" value="2-5"> 2–5 courses</label>
-                                    <label><input type="radio" name="courses" value="5+"> More than 5 courses</label>
+                                    <label><input type="radio" name="agents" value="1"> Just me</label>
+                                    <label><input type="radio" name="agents" value="2-5"> 2–10 agents</label>
+                                    <label><input type="radio" name="agents" value="5+"> 11+ agents</label>
                                 </div>
                             </div>
 
                             <div class="question">
                                 <div class="inline_wrap">
                                     <span class="q-number">02</span>
-                                    <span class="q-text">Do you want to promote your course to our featured agents?</span>
+                                    <span class="q-text">What are your top business goals in the next 6 months? (select
+                                        up to 4)</span>
                                 </div>
-                                <div class="options">
-                                    <label><input type="radio" name="promote" value="no"> Not necessary</label>
-                                    <label><input type="radio" name="promote" value="yes"> Yes, that's a
-                                        priority</label>
+
+                                <div class="options" id="goalOptions">
+                                    <label><input type="checkbox" name="goals" value="growth"> Recruit new
+                                        agents</label>
+                                    <label><input type="checkbox" name="goals" value="leads"> Automate
+                                        onboarding</label>
+                                    <label><input type="checkbox" name="goals" value="branding"> Launch marketing
+                                        campaigns</label>
+                                    <label><input type="checkbox" name="goals" value="automation"> Reduce admin
+                                        time</label>
+                                    <label><input type="checkbox" name="goals" value="team"> Access training
+                                        resources</label>
                                 </div>
                             </div>
 
                             <div class="question">
                                 <div class="inline_wrap">
                                     <span class="q-number">03</span>
-                                    <span class="q-text">Would you prefer to waive the 10% service fee per sale?</span>
+                                    <span class="q-text">What's your current tech stack?</span>
                                 </div>
                                 <div class="options">
-                                    <label><input type="radio" name="update" value="no"> No</label>
-                                    <label><input type="radio" name="update" value="yes"> Yes</label>
-                                </div>
-                            </div>
-
-                            <div class="question">
-                                <div class="inline_wrap">
-                                    <span class="q-number">04</span>
-                                    <span class="q-text">Do you want the flexibility to update or rotate course content
-                                        monthly?</span>
-                                 </div>
-                                <div class="options">
-                                    <label><input type="radio" name="update" value="no"> No</label>
-                                    <label><input type="radio" name="update" value="yes"> Yes</label>
-                                </div>
-                            </div>
-
-                            <div class="question">
-                                <div class="inline_wrap">
-                                    <span class="q-number">05</span>
-                                    <span class="q-text">Would you benefit from our vendor support & marketing
-                                        features?</span>
-                                </div>
-                                <div class="options">
-                                    <label><input type="radio" name="support" value="no"> Not really</label>
-                                    <label><input type="radio" name="support" value="yes"> Definitely</label>
+                                    <label><input type="radio" name="waive" value="email"> Mostly manual, email +
+                                        spreadsheets</label>
+                                    <label><input type="radio" name="waive" value="free"> Mix of free and paid
+                                        tools</label>
+                                    <label><input type="radio" name="waive" value="CRM"> Fully integrated CRM &
+                                        platform</label>
                                 </div>
                             </div>
 
                             <button type="submit" class="submit-btn">See My Best Option</button>
+
+                            <!-- RESULT WILL SHOW HERE -->
+                            <div id="resultBox"
+                                style="display:none; background: green; margin: 50px 0 0 0; border-radius: 20px; padding: 30px; width: 80%; margin: auto; margin-top: 50px; text-align: center;">
+                                <h3 id="resultTitle"
+                                    style="font-size: 30px; text-transform: capitalize; font-weight: 500; margin: 0; line-height: 35px; width: 70%; margin: auto;">
+                                </h3>
+                                <a id="resultBtn" href="broker-package.html"
+                                    style="background: #0484cd; padding: 0 20px; height: 50px; display: flex !important; align-items: center; justify-content: center; color: #fff; width: fit-content; border-radius: 50px; margin: auto; margin-top: 20px;">
+                                    Continue with the Broker Limited Plan →
+                                </a>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -169,7 +177,7 @@
         </div>
     </section>
 
-<!-- Footer -->
+    <!-- Footer -->
     <footer class="main_footer">
         <div class="container">
             <div class="row align-items-center">
@@ -258,6 +266,41 @@
         });
     </script>
 
+    <script>
+    // Limit checkbox to max 4
+    const goalOptions = document.querySelectorAll('input[name="goals"]');
+    const maxSelection = 4;
+
+    goalOptions.forEach(chk => {
+        chk.addEventListener("change", function () {
+            let selected = document.querySelectorAll('input[name="goals"]:checked');
+
+            if (selected.length > maxSelection) {
+                alert("You can select up to 4 goals only.");
+                this.checked = false;
+            }
+        });
+    });
+
+    // Form submit checking
+    document.getElementById("planForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const requiredGroups = ["agents", "waive"];
+
+        for (let group of requiredGroups) {
+            if (!document.querySelector(`input[name="${group}"]:checked`)) {
+                alert("Please answer all questions.");
+                return;
+            }
+        }
+
+        document.getElementById("resultTitle").innerText =
+            "We recommend the Broker Limited Plan for your team.";
+
+        document.getElementById("resultBox").style.display = "block";
+    });
+</script>
 
 </body>
 

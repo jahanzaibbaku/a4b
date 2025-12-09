@@ -1,0 +1,354 @@
+<!doctype html>
+
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agents4Brokers</title>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Customstyles CSS -->
+<link href="assets/css/customstyles.css" rel="stylesheet">
+
+<body>
+
+    <!-- header start -->
+    <header class="main_header desktop">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="assets/images/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="search_bar">
+                        <span>
+                            <form action="leads" method="POST">
+                                <input type="text" name="name" placeholder="Search Here">
+                                <input type="submit">
+                            </form>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                    </div>
+                    <div class="menu_wraper">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="features.html">Features</a></li>
+                            <li><a href="blogs.html">Blog</a></li>
+                        </ul>
+                        <a href="contact.html"><button type="button" class="btn btn-dark">Contact Us</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header class="header-main mobile">
+        <div class="nav-area-full">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 logo-area">
+                        <div class="logo">
+                            <a href="/">
+                                <img src="assets/images/logo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="menu_wraper">
+                            <button id="menuBtn" class="open-btn" onclick="openMenu()">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                            <div id="overlay" class="overlay"></div>
+                            <div id="closeWrap" class="close_wraper" onclick="closeMenu()">&times;</div>
+                            <ul id="sideMenu" class="side-menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="features.html">Features</a></li>
+                                <li><a href="blogs.html">Blog</a></li>
+                                <a href="contact.html"><button type="button" class="btn btn-dark">Contact
+                                        Us</button></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <section class="question_sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="global_inner">
+                        <h1>A4B Real Estate Brokerage Match Questionnaire</h1>
+                    </div>
+                    <div class="question_inner">
+                        <form id="matchForm" class="match-form">
+                            <!-- Q1 -->
+                            <div class="question">
+                                <div class="inline_wrap">
+                                    <span class="q-number">01</span>
+                                    <span class="q-text"> How many years have you been a real estate agent?</span>
+                                </div>
+                                <select name="years">
+                                    <option value="">Select...</option>
+                                    <option value="0-1">0–1 years</option>
+                                    <option value="1-5">1–5 years</option>
+                                    <option value="5-10">5–10 years</option>
+                                    <option value="10+">10+ years</option>
+                                </select>
+                            </div>
+
+                            <!-- Q2 -->
+                            <div class="question">
+                                <div class="inline_wrap">
+                                    <span class="q-number">02</span>
+                                    <span class="q-text"> Which best describes your technology needs?</span>
+                                </div>
+                                <select name="tech">
+                                    <option value="">Select...</option>
+                                    <option value="minimal">Minimal; I use my own tools</option>
+                                    <option value="moderate">Moderate; helpful tools are useful</option>
+                                    <option value="advanced">Advanced; need a full tech suite</option>
+                                </select>
+                            </div>
+
+                            <!-- Q3 -->
+                            <div class="question">
+                                <div class="inline_wrap">
+                                    <span class="q-number">03</span>
+                                    <span class="q-text">How important is having an active office culture to you?</span>
+                                </div>
+                                <select name="culture">
+                                    <option value="">Select...</option>
+                                    <option value="not_important">Not important</option>
+                                    <option value="somewhat">Somewhat important</option>
+                                    <option value="very">Very important</option>
+                                </select>
+                            </div>
+
+                            <!-- Q4 -->
+                            <div class="question">
+                                 <div class="inline_wrap">
+                                    <span class="q-number">04</span>
+                                    <span class="q-text">What level of broker involvement do you prefer?</span>
+                                </div>
+                                <select name="involvement">
+                                    <option value="">Select...</option>
+                                    <option value="minimal">Minimal oversight</option>
+                                    <option value="moderate">Moderate involvement</option>
+                                    <option value="high">High involvement</option>
+                                </select>
+                            </div>
+
+                            <!-- Q5 -->
+                            <div class="question">
+                                <div class="inline_wrap">
+                                    <span class="q-number">05</span>
+                                    <span class="q-text">How do you feel about brokerage training and development?</span>
+                                </div>
+                                <select name="training">
+                                    <option value="">Select...</option>
+                                    <option value="self_learning">I prefer self-directed learning</option>
+                                    <option value="some_training">Some training is helpful</option>
+                                    <option value="structured">I want structured training</option>
+                                </select>
+                            </div>
+
+                            <!-- Q6 -->
+                            <div class="question">
+                                <div class="inline_wrap">
+                                    <span class="q-number">06</span>
+                                    <span class="q-text">How important is brokerage-provided marketing support?</span>
+                                </div>
+                                <select name="marketing">
+                                    <option value="">Select...</option>
+                                    <option value="none">Not important</option>
+                                    <option value="some">Some assistance is beneficial</option>
+                                    <option value="full">High-level marketing support</option>
+                                </select>
+                            </div>
+
+                            <!-- Q7 -->
+                            <div class="question">
+                                <div class="inline_wrap">
+                                    <span class="q-number">07</span>
+                                    <span class="q-text"> Your preferred commission structure is:</span>
+                                </div>
+                                <select name="commission">
+                                    <option value="">Select...</option>
+                                    <option value="low_splits">Lowest splits, minimal services</option>
+                                    <option value="balanced">Balanced splits + services</option>
+                                    <option value="premium">Premium services + higher splits</option>
+                                </select>
+                            </div>
+
+                            <!-- Q8 -->
+                            <div class="question">
+                                <div class="inline_wrap">
+                                    <span class="q-number">08</span>
+                                    <span class="q-text">  How frequently would you prefer brokerage-hosted meetings/events?</span>
+                                </div>
+                                <select name="meetings">
+                                    <option value="">Select...</option>
+                                    <option value="rare">Rarely</option>
+                                    <option value="weekly">Weekly or bi-weekly</option>
+                                    <option value="monthly">Monthly</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="submit-btn">See My Best Match</button>
+
+                            <!-- RESULT WILL SHOW HERE -->
+                            <div id="matchResult"
+                                style="display:none; background: green; margin: 50px 0 0 0; border-radius: 20px; padding: 30px; width: 80%; margin: auto; margin-top: 50px; text-align: center;">
+                                <h3 id="matchText"
+                                    style="font-size: 30px; text-transform: capitalize; font-weight: 500; margin: 0; line-height: 35px; width: 70%; margin: auto;">
+                                </h3>
+                                <a id="result-btn" href="realtor-package.html"
+                                    style="background: #0484cd; padding: 0 20px; height: 50px; display: flex !important; align-items: center; justify-content: center; color: #fff; width: fit-content; border-radius: 50px; margin: auto; margin-top: 20px;">
+                                    Continue with the Broker Limited Plan →
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main_footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <div class="footer_logo">
+                        <a href="/">
+                            <img src="assets/images/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="footer_inner">
+                        <p>© 2025 Agents4Brokers.com. A wholly owned subsidiary of UDW Holdings INC, a California Real
+                            Estate Corporation, License #02125222. All rights reserved. Any unauthorized use,
+                            reproduction, or distribution of any materials from this website is strictly forbidden and
+                            may be punishable by law.</p>
+                        <h5>Follow Us</h5>
+                        <ul>
+                            <li><a href="javascript:;"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="javascript:;"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            <li><a href="javascript:;"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="javascript:;"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- bottom -->
+    <div class="container-fluid py-3 b-footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 col-sm-8 text-start">
+                    <p class="mb-0">Agents4Brokers © 2025. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 col-sm-4 text-end">
+                    <p class="mb-0">Terms & Conditions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
+        integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+        function openMenu() {
+            document.getElementById("sideMenu").style.right = "0";
+            document.getElementById("overlay").style.width = "100%";
+            document.getElementById("menuBtn").classList.add("hide");
+            document.getElementById("closeWrap").style.display = "block";
+        }
+
+        function closeMenu() {
+            document.getElementById("sideMenu").style.right = "-420px";
+            document.getElementById("overlay").style.width = "0";
+            document.getElementById("menuBtn").classList.remove("hide");
+            document.getElementById("closeWrap").style.display = "none";
+        }
+
+        // ✅ Dropdown toggle fix
+        document.querySelectorAll(".toggle").forEach(toggle => {
+            toggle.addEventListener("click", function () {
+                const dropdown = this.nextElementSibling;
+
+                // Close other open dropdowns (optional)
+                document.querySelectorAll(".dropdown").forEach(menu => {
+                    if (menu !== dropdown) {
+                        menu.style.display = "none";
+                    }
+                });
+
+                // Toggle current dropdown
+                if (dropdown.style.display === "block") {
+                    dropdown.style.display = "none";
+                } else {
+                    dropdown.style.display = "block";
+                }
+            });
+        });
+    </script>
+
+<script>
+document.getElementById("matchForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const fields = ["years", "tech", "culture", "involvement", "training", "marketing", "commission", "meetings"];
+
+    for (let f of fields) {
+        if (document.querySelector(`select[name="${f}"]`).value === "") {
+            alert("Please answer all questions before continuing.");
+            return;
+        }
+    }
+
+    document.getElementById("matchText").innerText =
+        "Your best match is the Balanced Brokerage Plan.";
+
+    document.getElementById("matchResult").style.display = "block";
+});
+</script>
+
+
+
+
+
+</body>
+
+</html>

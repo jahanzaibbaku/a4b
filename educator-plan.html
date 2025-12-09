@@ -1,4 +1,4 @@
-    <!doctype html>
+<!doctype html>
 
 <html lang="en">
 <meta charset="UTF-8">
@@ -19,6 +19,12 @@
 
 <!-- Customstyles CSS -->
 <link href="assets/css/customstyles.css" rel="stylesheet">
+
+<style>
+
+
+
+</style>
 
 <body>
 
@@ -94,93 +100,103 @@
     </header>
     <!-- header end -->
 
-    <section class="hero_sec">
+    <section class="question_sec">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="banner_inner">
-                        <h1>Agents4brokers.com: Connecting real rstate professionals</h1>
+                    <div class="global_inner">
+                        <h1>Should You Subscribe as a Vendor?</h1>
                     </div>
-                </div>
-            </div>
-            <div class="row mt-3 align-items-center">
-                <div class="col-md-6">
-                    <div class="banner_inner">
-                        <p>Agents4Brokers.com transforms how real estate professionals connect and grow. Our Al-driven platform makes recruiting frictionless, measurable, and profitable.</p>
-                        <p>We combine cutting-edge technology with human expertise to deliver targeted educational content and industry insights that matter.</p>
-                        <p>Brokerages find ideal candidates while agents discover perfect opportunities-all through our innovative matchmaking service.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="banner_inner">
-                        <img src="assets/images/banner.png" alt="">
-                        <p>Our first-of-its-kind platform leverages Al and automation to help you build stronger teams and develop top talent efficiently.</p>
+                    <div class="question_inner">
+                        <form id="planForm" class="form-container">
+
+                            <!-- Q1 -->
+                            <div class="question">
+                                <div class="inline_wrap">
+                                    <span class="q-number">01</span>
+                                    <span class="q-text">How many courses do you plan to list on The Agent
+                                        Academy?</span>
+                                </div>
+                                <div class="options">
+                                    <label><input type="radio" name="courses" value="1"> 1 course</label>
+                                    <label><input type="radio" name="courses" value="2-5"> 2–5 courses</label>
+                                    <label><input type="radio" name="courses" value="5+"> More than 5 courses</label>
+                                </div>
+                            </div>
+
+                            <!-- Q2 -->
+                            <div class="question">
+                                <div class="inline_wrap">
+                                    <span class="q-number">02</span>
+                                    <span class="q-text">Do you want to promote your course to our featured
+                                        agents?</span>
+                                </div>
+                                <div class="options">
+                                    <label><input type="radio" name="promote" value="no"> Not necessary</label>
+                                    <label><input type="radio" name="promote" value="yes"> Yes, that’s a
+                                        priority</label>
+                                </div>
+                            </div>
+
+                            <!-- Q3 -->
+                            <div class="question">
+                                <div class="inline_wrap">
+                                    <span class="q-number">03</span>
+                                    <span class="q-text">Would you prefer to waive the 10% service fee per sale?</span>
+                                </div>
+                                <div class="options">
+                                    <label><input type="radio" name="service_fee" value="dont_mind"> I don't mind the
+                                        fee</label>
+                                    <label><input type="radio" name="service_fee" value="keep_100"> I'd rather keep 100%
+                                        of sales</label>
+                                </div>
+                            </div>
+
+                            <!-- Q4 -->
+                            <div class="question">
+                                <div class="inline_wrap">
+                                    <span class="q-number">04</span>
+                                    <span class="q-text">Do you want the flexibility to update or rotate course content
+                                        monthly?</span>
+                                </div>
+                                <div class="options">
+                                    <label><input type="radio" name="monthly_update" value="no"> No</label>
+                                    <label><input type="radio" name="monthly_update" value="yes"> Yes</label>
+                                </div>
+                            </div>
+
+                            <!-- Q5 -->
+                            <div class="question">
+                                <div class="inline_wrap">
+                                    <span class="q-number">05</span>
+                                    <span class="q-text">Would you benefit from our vendor support & marketing
+                                        features?</span>
+                                </div>
+                                <div class="options">
+                                    <label><input type="radio" name="support" value="no"> Not really</label>
+                                    <label><input type="radio" name="support" value="yes"> Definitely</label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="submit-btn">See My Best Option</button>
+
+                            <!-- RESULT WILL SHOW HERE -->
+                            <div id="resultBox"
+                                style="display:none; background: green; margin: 50px 0 0 0; border-radius: 20px; padding: 30px; width: 80%; margin: auto; margin-top: 50px; text-align: center;">
+                                <h3 id="resultTitle"
+                                    style="font-size: 30px; text-transform: capitalize; font-weight: 500; margin: 0; line-height: 35px; width: 70%; margin: auto;">
+                                </h3>
+                                <a id="resultBtn" href="educator-package.html"
+                                    style="background: #0484cd; padding: 0 20px; height: 50px; display: flex !important; align-items: center; justify-content: center; color: #fff; width: fit-content; border-radius: 50px; margin: auto; margin-top: 20px;">
+                                    Continue with the Broker Limited Plan →
+                                </a>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Explore A Plan That Fits With Your Role -->
-    <div class="container-fluid py-5 bg-white explore">
-        <div class="container text-center">
-
-            <!-- Heading -->
-            <h2 class="ramabhadra-regular mb-2">Select Your Role</h2>
-            <p class="mb-5">Choose the plan that fits your needs. All plans include a 14-day free trial.</p>
-
-            <!-- Cards Row -->
-            <div class="row justify-content-center g-4 text-start">
-
-                <!-- Card 1 -->
-                <div class=" ecard">
-                    <div class="p-4 rounded-4 position-relative">
-                        <img src="assets/images/post-1.png" alt="icon" class="img-fluid">
-                        <h4 class="mt-3 mb-3">Broker</h4>
-                        <p>
-                            Let us be your Recruitment Coordinator!
-                        </p>
-                        <div class="e-btn">
-                            <a href="broker-plan.html" class="explore-btn">
-                                <img src="assets/images/arrow-up-right.svg" alt=""><br>
-                                Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="   ecard">
-                    <div class="p-4 rounded-4 position-relative">
-                        <img src="assets/images/post-2.png" alt="icon" class="img-fluid">
-                        <h4 class="mt-3 mb-3">Educator/Coach</h4>
-                        <p>
-                            Get more engagement for courses.
-                        </p>
-                        <div class="e-btn">
-                            <a href="educator-plan.html" class="explore-btn">
-                                <img src="assets/images/arrow-up-right.svg" alt=""><br>
-                                Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="ecard">
-                    <div class="p-4 rounded-4 position-relative">
-                        <img src="assets/images/post-3.png" alt="icon" class="img-fluid">
-                        <h4 class="mt-3 mb-3">Realtor</h4>
-                        <p>
-                            Find a broker that is right for you.
-                        </p>
-                        <div class="e-btn">
-                            <a href="realtor-plan.html" class="explore-btn">
-                                <img src="assets/images/arrow-up-right.svg" alt=""><br>
-                                Learn More</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="main_footer">
@@ -270,6 +286,27 @@
             });
         });
     </script>
+
+    <script>
+document.getElementById("planForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const requiredGroups = ["courses", "promote", "service_fee", "monthly_update", "support"];
+
+    for (let group of requiredGroups) {
+        if (!document.querySelector(`input[name="${group}"]:checked`)) {
+            alert("Please answer all questions before continuing.");
+            return;
+        }
+    }
+
+    document.getElementById("resultTitle").innerText =
+        "We recommend the Broker Limited Plan for your courses.";
+
+    document.getElementById("resultBox").style.display = "block";
+});
+</script>
+
 
 
 </body>

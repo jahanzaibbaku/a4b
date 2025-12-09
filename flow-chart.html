@@ -1,0 +1,244 @@
+<!doctype html>
+
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agents4Brokers</title>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Customstyles CSS -->
+<link href="assets/css/customstyles.css" rel="stylesheet">
+
+<style>
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 32px;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+.card {
+    background: white;
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+  h2 { margin: 0 0 8px 0; font-size: 22px; font-weight: 600; color: #111; }
+  p { margin: 0 0 32px 0; font-size: 14px; color: #777; }
+
+.chart {
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+  .tooltip {
+    position: absolute;
+    background: white;
+    color: #111;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.22);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 10;
+  }
+
+  .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -8px;
+    border: 8px solid transparent;
+    border-top-color: white;
+  }
+
+  .dot { r: 7; opacity: 0; transition: opacity 0.2s ease; }
+  .dot-glow { r: 16; opacity: 0; filter: blur(8px); transition: opacity 0.2s ease; }
+
+
+</style>
+
+<body>
+
+<div class="dashboard">
+
+  <!-- Active Users Card -->
+  <div class="card">
+    <h2>Active Users</h2>
+    <p>Daily active users over the last 30 days.</p>
+    <div class="chart" id="activeChart">
+      <div class="tooltip" id="activeTooltip">14</div>
+      <svg viewBox="0 0 380 240" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#86efac" stop-opacity="0.5"/>
+            <stop offset="100%" stop-color="#86efac" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+
+        <path fill="url(#grad)" d="M0,200 Q60,150 100,170 Q150,190 200,140 Q280,70 320,85 L380,95 L380,240 L0,240 Z"/>
+        <path id="linePath" fill="none" stroke="#22c55e" stroke-width="4" stroke-linecap="round"
+              d="M0,200 Q60,150 100,170 Q150,190 200,140 Q280,70 320,85 L380,95"/>
+        <path fill="none" stroke="transparent" stroke-width="40"
+              d="M0,200 Q60,150 100,170 Q150,190 200,140 Q280,70 320,85 L380,95" id="hoverLine"/>
+
+        <circle class="dot" fill="#22c55e" id="activeDot"/>
+        <circle class="dot-glow" fill="#22c55e" id="activeDotGlow"/>
+
+        <text x="15" y="225" fill="#aaa" font-size="13">01</text>
+        <text x="75" y="225" fill="#aaa" font-size="13">05</text>
+        <text x="155" y="225" fill="#aaa" font-size="13">10</text>
+        <text x="235" y="225" fill="#aaa" font-size="13">15</text>
+        <text x="355" y="225" fill="#aaa" font-size="13" text-anchor="end">30</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Matches Made Card -->
+  <div class="card">
+    <h2>Matches Made</h2>
+    <p>Number of successful matches per week.</p>
+    <div class="chart" id="matchesChart">
+      <div class="tooltip" id="matchesTooltip">80</div>
+      <svg viewBox="0 0 380 240">
+        <!-- Grid lines -->
+        <g stroke="#f0f0f0" stroke-width="1">
+          <line x1="0" y1="60" x2="380" y2="60"/>
+          <line x1="0" y1="100" x2="380" y2="100"/>
+          <line x1="0" y1="140" x2="380" y2="140"/>
+          <line x1="0" y1="180" x2="380" y2="180"/>
+        </g>
+
+        <!-- Bars + Hover Zones -->
+        <g>
+          <rect x="40"  width="40" y="220" height="40"  fill="#0ea5e9" rx="10"/><rect x="40"  width="40" y="0" height="240" fill="transparent" data-value="10"/>
+          <rect x="90"  width="40" y="200" height="60"  fill="#0ea5e9" rx="10"/><rect x="90"  width="40" y="0" height="240" fill="transparent" data-value="20"/>
+          <rect x="140" width="40" y="180" height="80"  fill="#0ea5e9" rx="10"/><rect x="140" width="40" y="0" height="240" fill="transparent" data-value="30"/>
+          <rect x="190" width="40" y="140" height="120" fill="#0ea5e9" rx="10"/><rect x="190" width="40" y="0" height="240" fill="transparent" data-value="50"/>
+          <rect x="240" width="40" y="120" height="140" fill="#0ea5e9" rx="10"/><rect x="240" width="40" y="0" height="240" fill="transparent" data-value="70"/>
+          <rect x="290" width="40" y="100" height="160" fill="#0ea5e9" rx="10"/><rect x="290" width="40" y="0" height="240" fill="transparent" data-value="80"/>
+        </g>
+
+        <!-- Top Labels -->
+        <text x="60"  y="215" fill="#10b981" font-size="14" font-weight="600" text-anchor="middle">10</text>
+        <text x="110" y="195" fill="#10b981" font-size="14" font-weight="600" text-anchor="middle">20</text>
+        <text x="160" y="175" fill="#10b981" font-size="14" font-weight="600" text-anchor="middle">30</text>
+        <text x="210" y="135" fill="#10b981" font-size="14" font-weight="600" text-anchor="middle">50</text>
+        <text x="260" y="115" fill="#10b981" font-size="14" font-weight="600" text-anchor="middle">70</text>
+        <text x="310" y="95"  fill="#10b981" font-size="16" font-weight="700" text-anchor="middle">80</text>
+
+        <text x="60" y="235" fill="#10b981" font-size="13" text-anchor="middle">01</text>
+
+        <circle class="dot" fill="#0ea5e9" id="matchesDot"/>
+        <circle class="dot-glow" fill="#0ea5e9" id="matchesDotGlow"/>
+      </svg>
+    </div>
+  </div>
+
+</div>
+
+
+<script>
+// Active Users - Perfect Hover
+document.getElementById('activeChart').addEventListener('mousemove', function(e) {
+  const chart = this;
+  const rect = chart.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const percentage = Math.max(0, Math.min(1, x / rect.width));
+  const path = document.getElementById('linePath');
+  const point = path.getPointAtLength(percentage * path.getTotalLength());
+
+  const value = Math.round(4 + percentage * 10); // fake smooth data
+
+  const tooltip = document.getElementById('activeTooltip');
+  tooltip.textContent = value;
+  tooltip.style.opacity = 1;
+  tooltip.style.left = point.x + 'px';
+  tooltip.style.top = (point.y - 50) + 'px';
+
+  document.getElementById('activeDot').setAttribute('cx', point.x);
+  document.getElementById('activeDot').setAttribute('cy', point.y);
+  document.getElementById('activeDot').style.opacity = 1;
+
+  document.getElementById('activeDotGlow').setAttribute('cx', point.x);
+  document.getElementById('activeDotGlow').setAttribute('cy', point.y);
+  document.getElementById('activeDotGlow').style.opacity = 0.4;
+});
+
+document.getElementById('activeChart').addEventListener('mouseleave', function() {
+  document.getElementById('activeTooltip').style.opacity = 0;
+  document.getElementById('activeDot').style.opacity = 0;
+  document.getElementById('activeDotGlow').style.opacity = 0;
+});
+
+// Matches Made - Perfect Hover
+document.getElementById('matchesChart').addEventListener('mousemove', function(e) {
+  const rect = this.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const zones = this.querySelectorAll('[data-value]');
+  let found = false;
+
+  zones.forEach(zone => {
+    const zoneX = parseFloat(zone.getAttribute('x'));
+    const width = parseFloat(zone.getAttribute('width'));
+    if (x >= zoneX && x <= zoneX + width) {
+      const value = zone.getAttribute('data-value');
+      const barHeight = value * 2.6; // perfect scale
+      const y = 260 - barHeight;
+
+      const tooltip = document.getElementById('matchesTooltip');
+      tooltip.textContent = value;
+      tooltip.style.opacity = 1;
+      tooltip.style.left = (zoneX + 20) + 'px';
+      tooltip.style.top = (y - 50) + 'px';
+
+      document.getElementById('matchesDot').setAttribute('cx', zoneX + 20);
+      document.getElementById('matchesDot').setAttribute('cy', y);
+      document.getElementById('matchesDot').style.opacity = 1;
+
+      document.getElementById('matchesDotGlow').setAttribute('cx', zoneX + 20);
+      document.getElementById('matchesDotGlow').setAttribute('cy', y);
+      document.getElementById('matchesDotGlow').style.opacity = 0.4;
+
+      found = true;
+    }
+  });
+
+  if (!found) {
+    document.getElementById('matchesTooltip').style.opacity = 0;
+    document.getElementById('matchesDot').style.opacity = 0;
+    document.getElementById('matchesDotGlow').style.opacity = 0;
+  }
+});
+
+document.getElementById('matchesChart').addEventListener('mouseleave', function() {
+  document.getElementById('matchesTooltip').style.opacity = 0;
+  document.getElementById('matchesDot').style.opacity = 0;
+  document.getElementById('matchesDotGlow').style.opacity = 0;
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!doctype html>
+
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agents4Brokers</title>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Customstyles CSS -->
+<link href="assets/css/customstyles.css" rel="stylesheet">
+
+<body>
+
+    <!-- header start -->
+    <header class="main_header desktop">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="assets/images/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="search_bar">
+                        <span>
+                            <form action="leads" method="POST">
+                                <input type="text" name="name" placeholder="Search Here">
+                                <input type="submit">
+                            </form>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                    </div>
+                    <div class="menu_wraper">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="features.html">Features</a></li>
+                            <li><a href="blogs.html">Blog</a></li>
+                        </ul>
+                        <a href="contact.html"><button type="button" class="btn btn-dark">Contact Us</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <header class="header-main mobile">
+        <div class="nav-area-full">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 logo-area">
+                        <div class="logo">
+                            <a href="/">
+                                <img src="assets/images/logo.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="menu_wraper">
+                            <button id="menuBtn" class="open-btn" onclick="openMenu()">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                            <div id="overlay" class="overlay"></div>
+                            <div id="closeWrap" class="close_wraper" onclick="closeMenu()">&times;</div>
+                            <ul id="sideMenu" class="side-menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="features.html">Features</a></li>
+                                <li><a href="blogs.html">Blog</a></li>
+                                <a href="contact.html"><button type="button" class="btn btn-dark">Contact Us</button></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+    
+    <!-- Features Us Banner -->
+    <div class="container-fluid position-relative overflow-hidden pt-5 w-100 banner">
+
+        <div class="container text-center pt-5 position-relative">
+            <!-- Heading -->
+            <h1 class="fw-bold mb-3 ramabhadra-regular">
+                Our
+                <span>
+                    Features
+                </span>
+            </h1>
+
+            <!-- Paragraph -->
+            <p class="mb-4">
+                Agents4Brokers uses a proprietary algorithm to connect you with the most relevant opportunities and
+                professionals.
+            </p>
+
+        </div>
+    </div>
+
+    <!-- Core Feature 1 -->
+    <div class="container-fluid py-5 bg-white ">
+        <div class="container pt-5 px-4 text-center cfone">
+
+            <!-- Heading -->
+            <div class="row justify-content-center">
+                <div class="col-lg-11 col-md-10 text-start">
+                    <h4>Core Feature 1</h4>
+                    <h2 class="fw-bold mb-3 text-white">
+                        Intelligent Matching & Networking
+                    </h2>
+                    <p class="text-white mb-5">
+                        Stop wasting time with generic networking. Agents4Brokers uses a proprietary algorithm to
+                        connect you with the most relevant opportunities and professionals based on location, specialty,
+                        and professional goals.
+                    </p>
+                    <ul>
+                        <li><strong>For Agents:</strong> Quickly connect with top-tier Brokers, find exclusive leads,
+                            and access mentorship to propel your career forward.</li>
+                        <li><strong>For Brokers:</strong> Seamlessly recruit, onboard, and manage relationships with
+                            talented Agents while expanding your geographic and specialty reach.</li>
+                        <li><strong>For Educators:</strong> Gain a dedicated, high-visibility channel to market and
+                            deliver specialized courses and essential professional development to a highly targeted
+                            audience.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Feature 2 -->
+    <div class="container-fluid py-5 bg-white ">
+        <div class="container pt-5 px-4 text-center cftwo">
+
+            <!-- Heading -->
+            <div class="row justify-content-center">
+                <div class="col-lg-11 col-md-10 text-start">
+                    <h4>Core Feature 2</h4>
+                    <h2 class="fw-bold mb-3 text-white">
+                        Exclusive Resource & Lead Access
+                    </h2>
+                    <p class="text-white mb-5">
+                        Your subscription is a key to a private market of high-value resources and leads that you won't
+                        find on public job boards.
+                    </p>
+                    <ul>
+                        <li><strong>Broker Lead Bank:</strong> Brokers can post and distribute exclusive, high-quality
+                            leads directly to their matched Agents.</li>
+                        <li><strong>Education Marketplace:</strong> Educators can list, manage, and sell their courses
+                            and certifications, instantly reaching thousands of motivated professionals.</li>
+                        <li><strong>Resource Sharing:</strong> Access document libraries, training materials, and market
+                            analysis provided by top industry experts.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Feature 3 -->
+    <div class="container-fluid py-5 bg-white ">
+        <div class="container pt-5 px-4 text-center cfone">
+
+            <!-- Heading -->
+            <div class="row justify-content-center">
+                <div class="col-lg-11 col-md-10 text-start">
+                    <h4>Core Feature 3</h4>
+                    <h2 class="fw-bold mb-3 text-white">
+                        Seamless SaaS Management
+                    </h2>
+                    <p class="text-white mb-5">
+                        We deliver a powerful platform with an intuitive interface and a transparent subscription model,
+                        allowing you to manage your professional presence effortlessly.
+                    </p>
+                    <ul>
+                        <li><strong>Simplified Subscription:</strong> Access all features for one clear, predictable
+                            monthly fee. No hidden costs, no transaction charges for connections.</li>
+                        <li><strong>Performance Dashboard:</strong> Agents can track applications and connections;
+                            Brokers can monitor recruiting success; Educators can view course enrollment and revenue—all
+                            from one centralized dashboard.</li>
+                        <li><strong>Mobile-Ready Experience:</strong> Manage your profile, leads, and connections
+                            anytime, anywhere, with a fully responsive platform optimized for all devices.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Reviews That Speak Volumes -->
+    <section class="py-5 bg-white reviewsspeak m-5">
+        <div class="container text-center mb-4">
+            <!-- Heading -->
+            <h2 class="fw-bold mb-2">
+                Reviews That Speak Volumes
+            </h2>
+            <p class="mb-5">
+                See what our community has to say about their success with Agent4Brokers
+            </p>
+        </div>
+
+        <div class="container">
+            <div class="swiper testimonialSwiper">
+                <div class="swiper-wrapper">
+
+                    <!-- Card 1 -->
+                    <div class="swiper-slide t-card">
+                        <div class="review-content">
+                            <div class="stars">
+                                <img src="assets/images/stars.svg">
+                            </div>
+                            <p>“Agent4Brokers transformed my business. I found the perfect broker partner within weeks
+                                and closed 3x more deals this quarter.”</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="assets/images/user1.png" class="profile-img">
+                                <span class="ms-2 fw-bold">Mark James</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="swiper-slide t-card">
+                        <div class="review-content">
+                            <div class="stars">
+                                <img src="assets/images/stars.svg">
+                            </div>
+                            <p>“The matching is incredible. It connected me with top-tier agents who perfectly align
+                                with my business values and goals.”
+                            </p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="assets/images/user2.png" class="profile-img">
+                                <span class="ms-2 fw-bold">Emily Carter</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="swiper-slide t-card">
+                        <div class="review-content">
+                            <div class="stars">
+                                <img src="assets/images/stars.svg">
+                            </div>
+                            <p>“I ve been able to reach thousands of professionals with my courses. The platform makes
+                                it easy to share knowledge and grow my brand.”</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="assets/images/user3.png" class="profile-img">
+                                <span class="ms-2 fw-bold">Mike Hardik</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+    <footer class="main_footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <div class="footer_logo">
+                        <a href="/">
+                            <img src="assets/images/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="footer_inner">
+                        <p>© 2025 Agents4Brokers.com. A wholly owned subsidiary of UDW Holdings INC, a California Real
+                            Estate Corporation, License #02125222. All rights reserved. Any unauthorized use,
+                            reproduction, or distribution of any materials from this website is strictly forbidden and
+                            may be punishable by law.</p>
+                        <h5>Follow Us</h5>
+                        <ul>
+                            <li><a href="javascript:;"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="javascript:;"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            <li><a href="javascript:;"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="javascript:;"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- bottom -->
+    <div class="container-fluid py-3 b-footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 col-sm-8 text-start">
+                    <p class="mb-0">Agents4Brokers © 2025. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 col-sm-4 text-end">
+                    <p class="mb-0">Terms & Conditions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
+        integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+        function openMenu() {
+            document.getElementById("sideMenu").style.right = "0";
+            document.getElementById("overlay").style.width = "100%";
+            document.getElementById("menuBtn").classList.add("hide");
+            document.getElementById("closeWrap").style.display = "block";
+        }
+
+        function closeMenu() {
+            document.getElementById("sideMenu").style.right = "-420px";
+            document.getElementById("overlay").style.width = "0";
+            document.getElementById("menuBtn").classList.remove("hide");
+            document.getElementById("closeWrap").style.display = "none";
+        }
+
+        // ✅ Dropdown toggle fix
+        document.querySelectorAll(".toggle").forEach(toggle => {
+            toggle.addEventListener("click", function () {
+                const dropdown = this.nextElementSibling;
+
+                // Close other open dropdowns (optional)
+                document.querySelectorAll(".dropdown").forEach(menu => {
+                    if (menu !== dropdown) {
+                        menu.style.display = "none";
+                    }
+                });
+
+                // Toggle current dropdown
+                if (dropdown.style.display === "block") {
+                    dropdown.style.display = "none";
+                } else {
+                    dropdown.style.display = "block";
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

@@ -6621,7 +6621,9 @@ section.landing_scree {
 
 
     .banner_inner h1 {
-    font-size: 58px;
+    font-size: 40px;
+    line-height: 45px;
+    font-weight: 700;
 }
 
 .banner_inner p {

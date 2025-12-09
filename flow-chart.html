@@ -19,64 +19,174 @@
 
 <!-- Customstyles CSS -->
 <link href="assets/css/customstyles.css" rel="stylesheet">
+ 
+<style>
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .card {
+    background: white;
+    border-radius: 26px;
+    padding: 32px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+  }
+  h2 { margin: 0 0 8px; font-size: 23px; font-weight: 600; color: #111; }
+  p { margin: 0 0 36px; font-size: 14.5px; color: #777; }
+
+
+</style>
 
 <body>
 
 <div class="dashboard">
-    <ul>
-        <li>
-            <h5>Active Users</h5>
-            <p>Daily active users over the last 30 days.</p>
-            <img src="assets/images/active-user.png" alt="">
-        </li>
-        <li>
-            <h5>Matches Made</h5>
-            <p>Number of successful matches per week.</p>
-            <img src="assets/images/match-box.png" alt="">
-        </li>
-    </ul>
+
+  <!-- Active Users - BIG SVG -->
+  <div class="card">
+    <h2>Active Users</h2>
+    <p>Daily active users over the last 30 days.</p>
+    <svg viewBox="0 0 420 300" width="100%" height="350">  <!-- YEHAN BADA KIYA -->
+      <!-- Sab kuch same, bas scale bara ho gaya -->
+      <defs>
+        <linearGradient id="grad1">
+          <stop offset="0%" stop-color="#86efac" stop-opacity="0.4"/>
+          <stop offset="100%" stop-color="#86efac" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <path fill="url(#grad1)" d="M0,250 Q55,175 105,200 Q155,225 210,175 Q265,112 320,118 Q370,100 420,112 L420,300 L0,300 Z"/>
+      <path id="line1" fill="none" stroke="#22c55e" stroke-width="5" stroke-linecap="round"
+            d="M0,250 Q55,175 105,200 Q155,225 210,175 Q265,112 320,118 Q370,100 420,112"/>
+      <path d="M0,250 Q55,175 105,200 Q155,225 210,175 Q265,112 320,118 Q370,100 420,112"
+            fill="none" stroke="transparent" stroke-width="50" pointer-events="stroke"/>
+      <circle id="dot1" r="9" fill="#22c55e" opacity="0"/>
+      <circle id="glow1" r="20" fill="#22c55e" opacity="0" filter="blur(10px)"/>
+      <g id="tip1" opacity="0">
+        <rect x="-38" y="-52" width="76" height="38" rx="14" fill="white" filter="drop-shadow(0 8px 20px rgba(0,0,0,0.25))"/>
+        <text text-anchor="middle" y="-28" font-size="18" font-weight="700" fill="#111">10</text>
+      </g>
+      <text x="20" y="282" fill="#aaa" font-size="15">01</text>
+      <text x="80" y="282" fill="#aaa" font-size="15">05</text>
+      <text x="140" y="282" fill="#aaa" font-size="15">10</text>
+      <text x="200" y="282" fill="#aaa" font-size="15">15</text>
+      <text x="260" y="282" fill="#aaa" font-size="15">20</text>
+      <text x="320" y="282" fill="#aaa" font-size="15">25</text>
+      <text x="395" y="282" fill="#aaa" font-size="15" text-anchor="end">30</text>
+    </svg>
+  </div>
+
+  <!-- Matches Made - BIG SVG -->
+  <div class="card">
+    <h2>Matches Made</h2>
+    <p>Number of successful matches per week.</p>
+    <svg viewBox="0 0 420 300" width="100%" height="350">  <!-- YEHAN BHI BADA KIYA -->
+      <g stroke="#f0f0f0" stroke-width="2">
+        <line x1="0" y1="75" x2="420" y2="75"/>
+        <line x1="0" y1="125" x2="420" y2="125"/>
+        <line x1="0" y1="175" x2="420" y2="175"/>
+        <line x1="0" y1="225" x2="420" y2="225"/>
+      </g>
+
+      <g>
+        <rect x="45"  width="50" y="250" height="75"  fill="#0ea5e9" rx="14"/>
+        <rect x="105" width="50" y="225" height="100" fill="#0ea5e9" rx="14"/>
+        <rect x="165" width="50" y="200" height="125" fill="#0ea5e9" rx="14"/>
+        <rect x="225" width="50" y="150" height="175" fill="#0ea5e9" rx="14"/>
+        <rect x="285" width="50" y="125" height="200" fill="#0ea5e9" rx="14"/>
+        <rect x="345" width="50" y="85"  height="240" fill="#0ea5e9" rx="14"/>
+      </g>
+
+      <g font-family="system-ui" pointer-events="none">
+        <text x="70"  y="242" fill="#10b981" font-size="19" font-weight="600" text-anchor="middle">10</text>
+        <text x="130" y="217" fill="#10b981" font-size="19" font-weight="600" text-anchor="middle">20</text>
+        <text x="190" y="192" fill="#10b981" font-size="19" font-weight="600" text-anchor="middle">30</text>
+        <text x="250" y="142" fill="#10b981" font-size="19" font-weight="600" text-anchor="middle">50</text>
+        <text x="310" y="117" fill="#10b981" font-size="19" font-weight="600" text-anchor="middle">70</text>
+        <text x="370" y="72"  fill="#10b981" font-size="24" font-weight="800" text-anchor="middle">80</text>
+        <text x="70" y="290" fill="#10b981" font-size="16" text-anchor="middle">01</text>
+      </g>
+
+      <g>
+        <rect x="45"  width="50" height="300" fill="transparent" data-value="10" data-center="70"  data-y="250"/>
+        <rect x="105" width="50" height="300" fill="transparent" data-value="20" data-center="130" data-y="225"/>
+        <rect x="165" width="50" height="300" fill="transparent" data-value="30" data-center="190" data-y="200"/>
+        <rect x="225" width="50" height="300" fill="transparent" data-value="50" data-center="250" data-y="150"/>
+        <rect x="285" width="50" height="300" fill="transparent" data-value="70" data-center="310" data-y="125"/>
+        <rect x="345" width="50" height="300" fill="transparent" data-value="80" data-center="370" data-y="85"/>
+      </g>
+
+      <circle id="dot2" r="10" fill="#0ea5e9" opacity="0"/>
+      <circle id="glow2" r="24" fill="#0ea5e9" opacity="0" filter="blur(10px)"/>
+      <g id="tip2" opacity="0">
+        <rect x="-40" y="-56" width="80" height="40" rx="16" fill="white" filter="drop-shadow(0 8px 20px rgba(0,0,0,0.25))"/>
+        <text text-anchor="middle" y="-30" font-size="19" font-weight="700" fill="#111">80</text>
+      </g>
+    </svg>
+  </div>
+
 </div>
 
-<style>
+<script>
+// Active Users (same perfect)
+document.querySelectorAll('svg')[0].addEventListener('mousemove', function(e) {
+  const line = this.querySelector('#line1');
+  const point = this.createSVGPoint();
+  point.x = e.clientX; point.y = e.clientY;
+  const cursor = point.matrixTransform(this.getScreenCTM().inverse());
+  const len = line.getTotalLength();
+  let pos = 0, minDist = Infinity;
+  for(let i=0; i<=len; i+=2){
+    const p = line.getPointAtLength(i);
+    const d = Math.hypot(p.x-cursor.x, p.y-cursor.y);
+    if(d < minDist){ minDist = d; pos = i; }
+  }
+  const pt = line.getPointAtLength(pos);
+  const value = Math.round(4 + (pos/len)*10);
 
+  this.querySelector('#dot1').setAttribute('cx', pt.x); this.querySelector('#dot1').setAttribute('cy', pt.y); this.querySelector('#dot1').setAttribute('opacity',1);
+  this.querySelector('#glow1').setAttribute('cx', pt.x); this.querySelector('#glow1').setAttribute('cy', pt.y); this.querySelector('#glow1').setAttribute('opacity',0.4);
+  this.querySelector('#tip1 text').textContent = value;
+  this.querySelector('#tip1').setAttribute('transform', `translate(${pt.x}, ${pt.y-40})`);
+  this.querySelector('#tip1').setAttribute('opacity',1);
+});
+document.querySelectorAll('svg')[0].addEventListener('mouseleave', function(){
+  this.querySelector('#dot1').setAttribute('opacity',0);
+  this.querySelector('#glow1').setAttribute('opacity',0);
+  this.querySelector('#tip1').setAttribute('opacity',0);
+});
 
-.dashboard ul {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-around;
-    padding: 0;
-    margin: 0;
-}
+// Matches Made - 80 label fixed + perfect hover
+document.querySelectorAll('svg')[1].querySelectorAll('rect[fill="transparent"]').forEach(bar => {
+  bar.addEventListener('mousemove', function(){
+    const value = this.getAttribute('data-value');
+    const centerX = this.getAttribute('data-center');
+    const barTopY = this.getAttribute('data-y');
 
-.dashboard ul li {
-    box-shadow: 0 0 20px #ccc;
-    flex: 0 0 48%;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    padding: 30px;
-}
+    const svg = this.closest('svg');
+    svg.querySelector('#dot2').setAttribute('cx', centerX);
+    svg.querySelector('#dot2').setAttribute('cy', barTopY);
+    svg.querySelector('#dot2').setAttribute('opacity',1);
+    svg.querySelector('#glow2').setAttribute('cx', centerX);
+    svg.querySelector('#glow2').setAttribute('cy', barTopY);
+    svg.querySelector('#glow2').setAttribute('opacity',0.4);
 
-.dashboard ul li img {
-    width: 90%;
-    display: block;
-    height: 360px;
-}
+    svg.querySelector('#tip2 text').textContent = value;
+    svg.querySelector('#tip2').setAttribute('transform', `translate(${centerX}, ${barTopY - 25})`);
+    svg.querySelector('#tip2').setAttribute('opacity',1);
+  });
 
-.dashboard ul li h5 {
-    color: #000;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 24px;
-    margin: 0 0 10px 0;
-}
+  bar.addEventListener('mouseleave', function(){
+    const svg = this.closest('svg');
+    svg.querySelector('#dot2').setAttribute('opacity',0);
+    svg.querySelector('#glow2').setAttribute('opacity',0);
+    svg.querySelector('#tip2').setAttribute('opacity',0);
+  });
+});
+</script>
 
-.dashboard ul li p {
-    font-size: 17px;
-    color: #808080;
-}
-
-
-</style>
 
 </body>
 </html>

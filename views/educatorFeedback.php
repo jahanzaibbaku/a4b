@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<?php include_once("includes/head.php")?>
+
+<body class="home_page">
+    
+
+    <!-- Sidebar + Main Layout -->
+    <div class="d-flex" style="background-color: #FDFDFD;">
+
+        <button class="mobile-menu">☰</button>
+
+        <aside id="sidebarone" class="sidebarone p-3">
+            <img src="assets/images/dashboard/form-logo.png" alt="Form Logo" class="mb-5">
+
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a class="nav-link " href="#"><i class="bi bi-house-fill"></i>
+                        Dashboard</a></li>
+                <li class="nav-item mb-2"><a class="nav-link" href="#"><i class="bi bi-puzzle-fill"></i> Create Course
+                    </a></li>
+                <li class="nav-item mb-2"><a class="nav-link" href="#"><i class="bi bi-diagram-2"></i> Publish Course
+                    </a></li>
+                <li class="nav-item mb-2"><a class="nav-link " href="#"><i class="bi bi-funnel-fill"></i> Track
+                        Enrollment </a></li>
+                <li class="nav-item mb-4"><a class="nav-link active" href="#"><i class="bi bi-person-vcard"></i> View
+                        Feedback
+                    </a></li>
+            </ul>
+
+            <div style="display: flex; justify-content: start; align-items: end; height: 100%; font-weight: bold;">
+                <a href="#" class="nav-link"><i class="bi bi-headset" style="font-size: 22px;"></i> Contact Support</a>
+            </div>
+        </aside>
+
+        <!-- Sidebar -->
+        <aside id="sidebar" class="sidebar p-3">
+            <img src="assets/images/dashboard/form-logo.png" alt="Form Logo" class="mb-5">
+
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a class="nav-link " href="#"><i class="bi bi-house-fill"></i>
+                        Dashboard</a></li>
+                <li class="nav-item mb-2"><a class="nav-link" href="#"><i class="bi bi-puzzle-fill"></i> Create Course
+                    </a></li>
+                <li class="nav-item mb-2"><a class="nav-link" href="#"><i class="bi bi-diagram-2"></i> Publish Course
+                    </a></li>
+                <li class="nav-item mb-2"><a class="nav-link " href="#"><i class="bi bi-funnel-fill"></i> Track
+                        Enrollment </a></li>
+                <li class="nav-item mb-4"><a class="nav-link active" href="#"><i class="bi bi-person-vcard"></i> View
+                        Feedback
+                    </a></li>
+            </ul>
+
+            <div
+                style="display: flex; justify-content: start; align-items: end; height: 100%; font-weight: bold !important;">
+                <a href="#" class="nav-link"><i class="bi bi-headset" style="font-size: 22px;"></i> Contact Support</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-grow-1 p-4" style="overflow: hidden;">
+
+            <!-- Welcome section -->
+            <div class="welcome-box p-3 mb-4">
+                <h5 class="mb-0">Welcome back Taylor 👋</h5>
+                <div class="user-info">
+                    <i class="bi bi-bell"></i>
+                    <div>
+                        <div class="user-profile">
+                            <img src="assets/images/dashboard/user-linda.png" alt="user image">
+                            <h6>Linda <i class="bi bi-chevron-down"></i></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pipeline View -->
+            <h2 class="profile-completion">View <span>Feedback</span></h2>
+
+            <div class="col-lg-12 col-sm-12 learning-card-box">
+                <div class="card learning-card text-center p-2">
+                    <img src="assets/images/dashboard/feedback-img.png" />
+                    <h6 class="my-3">Your heading course Will be here...</h6>
+                    <div class="learning-info">
+                        <ul>
+                            <li><img src="assets/images/dashboard/author.png" alt="Learning Resource Image"></li>
+                            <li>Linda James</li>
+                        </ul>
+                        <ul>
+                            <li><i class="bi bi-eye-fill" style="color: #81CA59;"></i></li>
+                            <li>55</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container my-5 shadow">
+
+                <!-- Review 1 -->
+                <div class="review-box p-4 mb-5">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex">
+                            <img src="assets/images/dashboard/review1.png" class="review-img">
+                            <div class="ms-3">
+                                <h5 class="fw-bold mb-0">Stroke Kan</h5>
+                                <p class="text-muted mb-0 small">Senior Broker</p>
+                                <p class="text-primary mb-0 small">25 Oct 2025</p>
+                            </div>
+                        </div>
+
+                        <div class="stars text-warning">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div>
+                    </div>
+
+                    <p class="mt-3 mb-4">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                    </p>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <a href="#" class="me-3 action-btn"><i class="bi bi-reply"></i> Reply</a>
+                            <a href="#" class="action-btn"><i class="bi bi-hand-thumbs-up"></i> Like</a>
+                        </div>
+
+                        <div class="text-muted small">
+                            <i class="bi bi-hand-thumbs-up"></i> 10 Likes
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-box p-4 mb-5">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex">
+                            <img src="assets/images/dashboard/review2.png" class="review-img">
+                            <div class="ms-3">
+                                <h5 class="fw-bold mb-0">Taylor Morgan</h5>
+                                <p class="text-muted mb-0 small">Senior Agent</p>
+                                <p class="text-primary mb-0 small">20 Aug 2025</p>
+                            </div>
+                        </div>
+
+                        <div class="stars text-warning">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div>
+                    </div>
+
+                    <p class="mt-3 mb-4">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                    </p>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <a href="#" class="me-3 action-btn"><i class="bi bi-reply"></i> Reply</a>
+                            <a href="#" class="action-btn"><i class="bi bi-hand-thumbs-up"></i> Like</a>
+                        </div>
+
+                        <div class="text-muted small">
+                            <i class="bi bi-hand-thumbs-up"></i> 3 Likes
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </main>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const toggle = document.querySelector(".mobile-menu");
+            const sidebar = document.querySelector("#sidebarone");
+
+            toggle.addEventListener("click", function () {
+                sidebar.classList.toggle("active");
+            });
+
+        });
+
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

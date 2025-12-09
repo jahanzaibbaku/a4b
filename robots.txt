@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+Allow: /
+
+Sitemap: https://www.uspublicationhosue.com/sitemap.xml

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agents4Brokers</title>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Customstyles CSS -->
+    <link href="customstyles.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <!-- Sidebar + Main Layout -->
+    <div class="d-flex" style="background-color: #FDFDFD;">
+
+        <button class="mobile-menu">☰</button>
+
+        <aside id="sidebarone" class="sidebarone p-3">
+            <img src="images/dashboard/form-logo.png" alt="Form Logo" class="mb-5">
+
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a class="nav-link  " href="#"><img src="images/dashboard_icon.svg"
+                            alt="dashboard"></i>
+                        Dashboard</a></li>
+                <li class="nav-item mb-2"><a class="nav-link" href="#"><img src="images/userManagement_icon.svg"
+                            alt="user"> User Management </a></li>
+                <li class="nav-item mb-2"><a class="nav-link" href="#"><img src="images/subscription_icon.svg"
+                            alt="Subscription"> Subscription </a></li>
+                <li class="nav-item mb-2"><a class="nav-link" href="#"><img src="images/analytics_icon.svg"
+                            alt="Analytics"> Analytics </a></li>
+                <li class="nav-item mb-4"><a class="nav-link active" href="#"><img src="images/setting_icon.svg"
+                            alt="Setting">
+                        System Setting </a></li>
+                <li class="nav-item mb-4"><a class="nav-link" href="#"><img src="images/pipeline_icon.svg"
+                            alt="pipeline_icon"> Recruiting Pipeline </a></li>
+                <li class="nav-item mb-4"><a class="nav-link" href="#"><img src="images/educator_icon.svg"
+                            alt="educator_icon"> Course & Educator Management </a></li>
+            </ul>
+
+            <div style="display: flex; justify-content: start; align-items: end; height: 100%; font-weight: bold;">
+                <a href="#" class="nav-link"><img src="images/support_icon.svg" alt="support_icon"> Contact Support</a>
+            </div>
+        </aside>
+
+        <!-- Sidebar -->
+        <aside id="sidebar" class="sidebar p-3">
+            <img src="images/dashboard/form-logo.png" alt="Form Logo" class="mb-5">
+
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a class="nav-link" href="#"><img src="images/dashboard_icon.svg"
+                            alt="dashboard"></i>
+                        Dashboard</a></li>
+                <li class="nav-item mb-2"><a class="nav-link" href="#"><img src="images/userManagement_icon.svg"
+                            alt="user"> User Management </a></li>
+                <li class="nav-item mb-2"><a class="nav-link" href="#"><img src="images/subscription_icon.svg"
+                            alt="Subscription"> Subscription </a></li>
+                <li class="nav-item mb-2"><a class="nav-link" href="#"><img src="images/analytics_icon.svg"
+                            alt="Analytics"> Analytics </a></li>
+                <li class="nav-item mb-4"><a class="nav-link active" href="#"><img src="images/setting_icon.svg"
+                            alt="Setting">
+                        System Setting </a></li>
+                <li class="nav-item mb-4"><a class="nav-link" href="#"><img src="images/pipeline_icon.svg"
+                            alt="pipeline_icon"> Recruiting Pipeline </a></li>
+                <li class="nav-item mb-4"><a class="nav-link" href="#"><img src="images/educator_icon.svg"
+                            alt="educator_icon"> Course & Educator Management </a></li>
+            </ul>
+
+            <div style="display: flex; justify-content: start; align-items: end; height: 100%; font-weight: bold;">
+                <a href="#" class="nav-link"><img src="images/support_icon.svg" alt="support_icon"> Contact Support</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-grow-1 p-4" style="overflow: hidden;">
+
+            <!-- Welcome section -->
+            <div class="welcome-box p-3 mb-4">
+                <h5 class="mb-0">Welcome back Tom 👋</h5>
+                <div class="user-info">
+                    <i class="bi bi-bell"></i>
+                    <div>
+                        <div class="user-profile">
+                            <img src="images/dashboard/user-info.png" alt="user image">
+                            <h6>Tom <i class="bi bi-chevron-down"></i></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pipeline View -->
+            <h2 class="profile-completion">System <span>Settings</span></h2>
+            <p class="text-black">Adjust matching criteria weights, permissions, and roles. </p>
+
+            <div class="mcw">
+                <div class="mcw-h">
+                    <h3>Matching Criteria Weights</h3>
+                </div>
+                <div class="mcw-c">
+                    <div class="mcw-ca">
+                        <label>Location Proximity</label>
+                        <span class="slider__label"><input class="jsf slider__input-a" type="range" min="0" max="100"
+                                value="75"> <span class="slider__output">75</span>%</span>
+                    </div>
+                    <div class="mcw-ca">
+                        <label>Years of Experience</label>
+                        <span class="slider__label"><input class="jsf slider__input-b" type="range" min="0" max="100"
+                                value="75"> <span class="slider__output">75</span>%</span>
+                    </div>
+                    <div class="mcw-ca">
+                        <label>Specialization Match</label>
+                        <span class="slider__label"><input class="jsf slider__input-a" type="range" min="0" max="100"
+                                value="90"> <span class="slider__output">90</span>%</span>
+                    </div>
+                    <div class="mcw-ca">
+                        <label>Budget Alignment</label>
+                        <span class="slider__label"><input class="jsf slider__input-b" type="range" min="0" max="100"
+                                value="85"> <span class="slider__output">85</span>%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mcw mt-3">
+                <div class="mcw-h">
+                    <h3>User Roles</h3>
+                </div>
+                <div class="user-r">
+                    <div class="ur-d">
+                        <h3>
+                            Administrator
+                        </h3>
+                        <div class="ur-a">
+                            <img src="images/ur-edit.svg" alt="user-role">
+                            <img src="images/ur-delete.svg" alt="user-role">
+                        </div>
+                    </div>
+                    <div class="ur-d">
+                        <h3>
+                            Broker
+                        </h3>
+                        <div class="ur-a">
+                            <img src="images/ur-edit.svg" alt="user-role">
+                            <img src="images/ur-delete.svg" alt="user-role">
+                        </div>
+                    </div>
+                    <div class="ur-d">
+                        <h3>
+                            Agent
+                        </h3>
+                        <div class="ur-a">
+                            <img src="images/ur-edit.svg" alt="user-role">
+                            <img src="images/ur-delete.svg" alt="user-role">
+                        </div>
+                    </div>
+                    <div class="ur-d">
+                        <h3>
+                            Educator
+                        </h3>
+                        <div class="ur-a">
+                            <img src="images/ur-edit.svg" alt="user-role">
+                            <img src="images/ur-delete.svg" alt="user-role">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="reset-btn">
+                <button>Reset to Defaults</button>
+                <button>Save Changes</button>
+            </div>
+
+        </main>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const toggle = document.querySelector(".mobile-menu");
+            const sidebar = document.querySelector("#sidebarone");
+
+            toggle.addEventListener("click", function () {
+                sidebar.classList.toggle("active");
+            });
+
+        });
+
+        const inputs = document.querySelectorAll('.jsf');
+
+        inputs.forEach(input => {
+            const output = input.parentElement.querySelector('.slider__output');
+
+            input.addEventListener('input', () => {
+                output.textContent = input.value;
+            });
+        });
+
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

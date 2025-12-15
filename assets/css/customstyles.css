@@ -5400,6 +5400,7 @@ section.landing_scree {
     .map-wrapper {
         position: relative;
         overflow: hidden;
+        height: 600px;
     }
 
     .map-wrapper iframe {
@@ -8247,6 +8248,43 @@ section.landing_scree {
     margin-bottom: 30px;
 }
 
+
+
+.info_wrap {
+    background: #0484CD;
+    position: absolute;
+    bottom: 0;
+    width: 222px;
+    height: 222px;
+    top: 0;
+    margin: auto;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.info_wrap svg {
+    font-size: 50px;
+    margin: 0 0 20px 0;
+}
+
+.info_wrap h5 {
+    font-size: 29px;
+    line-height: 30px;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+}
+
+.info_wrap a {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 20px;
+}
 
 
     @media (max-width: 1399px) {
@@ -11203,6 +11241,13 @@ section.sec_2 .row.justify-content-center.g-4.text-start .ecard {
 }
 
 @media only screen and (max-width: 767px) {
+
+    .info_wrap {
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
 
     ul#mobileMenu {
         display: block;

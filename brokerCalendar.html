@@ -16,7 +16,80 @@
 
 <!-- Customstyles CSS -->
 <link href="assets/css/customstyles.css" rel="stylesheet">
+<style>
+      <style>
+    body {
+      background: #f7f9fb;
+    }
 
+    .calendar-box,
+    .right-box {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.07);
+    }
+
+    .view-switch .btn {
+      border-radius: 40px;
+    }
+
+    .view-switch .active {
+      background: #00a36c;
+      color: #fff;
+    }
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 8px;
+    }
+
+    .day-name {
+      font-weight: bold;
+      text-align: center;
+      padding-bottom: 10px;
+    }
+
+    .day-box {
+      height: 90px;
+      background: #fff;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      padding: 6px;
+      font-size: 14px;
+      position: relative;
+    }
+
+    .event-blue,
+    .event-green {
+      position: absolute;
+      left: 5px;
+      bottom: 5px;
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-size: 10px;
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    .event-blue {
+      background: #007bff;
+    }
+
+    .event-green {
+      background: #00b050;
+    }
+
+    .task-item {
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .task-item:last-child {
+      border-bottom: none;
+    }
+  </style>
+</style>
 <body class="home_page">
      
     

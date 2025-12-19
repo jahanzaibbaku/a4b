@@ -87,7 +87,115 @@
     .task-item:last-child {
       border-bottom: none;
     }
-</style>
+    @media (max-width: 768px) {
+
+  /* Sidebar hide on mobile */
+  #sidebar {
+    display: none;
+  }
+
+  /* Calendar box full width */
+  .calendar-box {
+    padding: 15px !important;
+  }
+
+  /* Calendar Grid Responsive */
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important; /* 3 columns on mobile */
+    gap: 6px;
+  }
+
+  .day-name {
+    font-size: 12px;
+    padding-bottom: 5px;
+  }
+
+  .day-box {
+    height: 70px !important;
+    font-size: 12px;
+  }
+
+  /* Events inside day small */
+  .event-blue,
+  .event-green {
+    font-size: 8px;
+    padding: 1px 5px;
+  }
+
+  /* Fix top header layout */
+  .calendar-head h5 {
+    font-size: 16px;
+  }
+
+  .view-switch .btn {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+
+  /* Right sidebar moves below */
+  .right-box {
+    margin-top: 20px;
+  }
+
+  /* Tasks section center align */
+  #taskList, #reminderList {
+    text-align: center;
+  }
+   .calendar-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;         /* center everything */
+    text-align: center;
+    gap: 10px;
+  }
+
+  .calendar-head h5 {
+    font-size: 18px !important;  /* Month name smaller */
+    margin-bottom: 5px;
+  }
+
+  /* Prev/Next arrows center */
+  .calendar-head .bi-chevron-left,
+  .calendar-head .bi-chevron-right {
+    font-size: 18px;
+    margin: 0 4px;
+  }
+
+  /* View Switch buttons center + smaller */
+  .view-switch {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 6px;
+  }
+
+  .view-switch .btn {
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+  }
+   .header-flex {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 10px !important;
+  }
+
+  .header-flex h3 {
+    font-size: 18px !important;
+  }
+
+  .header-flex p {
+    font-size: 13px !important;
+  }
+
+  .header-flex button {
+    width: 100% !important;
+    max-width: 320px;
+  }
+
+}
+  </style>
 <body class="home_page">
      
     
@@ -144,7 +252,7 @@
     <!-- Main Content -->
     <div class="container-fluid p-4 calendar">
 
-      <div class="d-flex justify-content-between align-items-center mb-4">
+      <div class="d-flex justify-content-between align-items-center mb-4 header-flex">
         <div>
           <h3><strong>Calendar</strong> / <span style="color: #0484CD; font-weight: 600;">Tasks</span></h3>
           <p class="text-muted">Schedule interviews, set reminders.</p>

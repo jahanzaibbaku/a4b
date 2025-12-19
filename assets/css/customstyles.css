@@ -1823,7 +1823,6 @@ input.form-control {
     position: fixed;
     top: 0;
     left: -250px;
-    /* Default visible for desktop */
     transition: all 0.3s ease-in-out;
     padding-top: 60px;
     z-index: 999;
@@ -1837,7 +1836,9 @@ input.form-control {
 
 .sidebarone ul li a {
     color: #fff;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: start;
     padding: 12px 20px;
     text-decoration: none;
 }
@@ -2796,6 +2797,10 @@ input.form-control {
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.a-d-s {
+    width: 100%;
 
 }
 
@@ -3934,14 +3939,11 @@ input.form-control {
     margin: auto;
     border-radius: 50px;
 }
-.modal-content{
+
+.modal-content {
     border: none;
 }
 
-.a-d-s{
-    width: 100%;
-
-}
 @media (max-width: 1399px) {
 
     .hero-section h1,
@@ -5265,6 +5267,12 @@ input.form-control {
         margin-bottom: 10px !important;
     }
 
+    .sidebarone a img {
+        width: 10%;
+        margin: 0 !important;
+        margin-right: 10px  !important;
+    }
+
     .sidebarone div {
         height: auto !important;
         margin-left: 20px;
@@ -5433,15 +5441,18 @@ input.form-control {
 }
 
 @media (max-width: 575px) {
-    .schedule-form{
+    .schedule-form {
         width: 95%;
     }
-    .s-f form{
+
+    .s-f form {
         width: 100%;
     }
-    .broker-agent .ba-detail{
+
+    .broker-agent .ba-detail {
         padding: 5px;
     }
+
     .reset-btn {
         display: flex;
         flex-direction: column;
@@ -6512,5 +6523,4 @@ input.form-control {
         border-radius: 0 0 0 50px;
         border-bottom: 10px solid #008752;
     }
-
 }

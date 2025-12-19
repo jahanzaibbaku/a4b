@@ -3937,6 +3937,11 @@ input.form-control {
 .modal-content{
     border: none;
 }
+
+.a-d-s{
+    width: 100%;
+
+}
 @media (max-width: 1399px) {
 
     .hero-section h1,
@@ -6507,4 +6512,5 @@ input.form-control {
         border-radius: 0 0 0 50px;
         border-bottom: 10px solid #008752;
     }
+
 }
